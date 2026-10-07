@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marginalia</title>
+<meta name="description" content="Ask questions about twelve classic public-domain novels. Answers cite passages, and every quote is checked against the source text.">
+<link rel="icon" href="/favicon.svg">
+<link rel="stylesheet" href="/styles.css">
+<script src="/app.js" defer></script>
+</head>
+<body>
+<header class="top">
+  <a class="mark" href="/">Marginalia</a>
+  <span class="crumb">twelve novels, every quote checked</span>
+</header>
+
+<main class="wrap">
+  <section class="intro">
+    <h1>Ask the books.</h1>
+    <p class="lede">Questions about twelve public-domain novels, answered from the text itself. Every quote in an answer is checked word for word against the passage it cites.</p>
+  </section>
+
+  <form id="ask" class="ask" autocomplete="off">
+    <label class="sr" for="q">Your question</label>
+    <input id="q" name="q" type="search" maxlength="400" placeholder="What does Darcy say about Elizabeth at the first ball?" required>
+    <button type="submit" id="go">Ask</button>
+  </form>
+
+  <div class="filters" role="group" aria-label="Limit to books">
+    <span class="filters-label">Search in</span>
+    <div id="chips" class="chips"></div>
+  </div>
+
+  <div id="examples" class="examples">
+    <span class="filters-label">Try</span>
+    <div class="example-list"></div>
+  </div>
+
+  <div id="status" class="status" role="status" aria-live="polite"></div>
+  <section id="result" class="result" hidden></section>
+</main>
+
+<footer class="foot">
+  <p>Texts from <a href="https://www.gutenberg.org/">Project Gutenberg</a>, public domain in the US. Search is BM25 over paragraph-based chunks, with optional vector search. Answers without a model key are extractive: the best sentences from the best passages. Source: <a href="https://github.com/frogr/marginalia">github.com/frogr/marginalia</a>.</p>
+</footer>
+</body>
+</html>

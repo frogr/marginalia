@@ -1,0 +1,23 @@
+# Render Blueprint: New > Blueprint > pick this repo.
+services:
+  - type: web
+    name: marginalia
+    runtime: node
+    plan: free
+    # The embed step does nothing without OPENAI_API_KEY.
+    buildCommand: npm ci --include=dev && npm run build && node dist/scripts/embed.js
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: DAILY_LLM_LIMIT
+        value: "200"
+      - key: ASK_PER_MINUTE
+        value: "12"
+      - key: TRUST_PROXY
+        value: "1"
