@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "pride-and-prejudice",
+    "title": "Pride and Prejudice",
+    "chapters": 61,
+    "paragraphs": 2060,
+    "words": 121571
+  },
+  {
+    "slug": "moby-dick",
+    "title": "Moby-Dick",
+    "chapters": 136,
+    "paragraphs": 2432,
+    "words": 207804
+  },
+  {
+    "slug": "frankenstein",
+    "title": "Frankenstein",
+    "chapters": 28,
+    "paragraphs": 764,
+    "words": 74919
+  },
+  {
+    "slug": "dracula",
+    "title": "Dracula",
+    "chapters": 27,
+    "paragraphs": 2092,
+    "words": 160654
+  },
+  {
+    "slug": "jane-eyre",
+    "title": "Jane Eyre",
+    "chapters": 38,
+    "paragraphs": 4048,
+    "words": 184376
+  },
+  {
+    "slug": "great-expectations",
+    "title": "Great Expectations",
+    "chapters": 59,
+    "paragraphs": 3835,
+    "words": 184218
+  },
+  {
+    "slug": "the-great-gatsby",
+    "title": "The Great Gatsby",
+    "chapters": 9,
+    "paragraphs": 1635,
+    "words": 48143
+  },
+  {
+    "slug": "alice-in-wonderland",
+    "title": "Alice's Adventures in Wonderland",
+    "chapters": 12,
+    "paragraphs": 798,
+    "words": 26369
+  },
+  {
+    "slug": "the-picture-of-dorian-gray",
+    "title": "The Picture of Dorian Gray",
+    "chapters": 20,
+    "paragraphs": 1491,
+    "words": 78503
+  },
+  {
+    "slug": "crime-and-punishment",
+    "title": "Crime and Punishment",
+    "chapters": 41,
+    "paragraphs": 3904,
+    "words": 202615
+  },
+  {
+    "slug": "a-tale-of-two-cities",
+    "title": "A Tale of Two Cities",
+    "chapters": 45,
+    "paragraphs": 3269,
+    "words": 135421
+  },
+  {
+    "slug": "little-women",
+    "title": "Little Women",
+    "chapters": 47,
+    "paragraphs": 3815,
+    "words": 185675
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src", "scripts/embed.ts"],
+  "exclude": ["src/eval"]
+}

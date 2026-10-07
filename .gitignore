@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+coverage/
+.vitest/
+*.log
+# Gutenberg downloads (about 10 MB). `npm run corpus` re-downloads them.
+data/raw/
+# Built at deploy time by `npm run embed` when OPENAI_API_KEY is set.
+data/embeddings/
