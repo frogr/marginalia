@@ -40,7 +40,7 @@ $ npm run eval
 
 Writes `evals/results/summary.md`, `retrieval.json` and `validator.json`.
 
-**Questions.** `evals/questions.json` has 46 questions in four types: direct (12, names and wording close to the text), paraphrased (12, wording deliberately different), name-free (10, no character names or titles) and cross-book (12, a name or idea that appears in more than one book, like Elizabeth in Pride and Prejudice and Frankenstein, or Pip in Great Expectations and Moby-Dick). Each has one or two gold snippets that I found by searching the processed text, and the eval refuses to run if any snippet is missing from its book. A hit is any retrieved chunk from the gold book that contains a gold snippet. No book filter is used, so the retriever has to find the book too.
+**Questions.** `evals/questions.json` has 46 questions in four types: direct (12, names and wording close to the text), paraphrased (12, wording deliberately different), name-free (10, no character names or titles) and cross-book (12, a name or idea that appears in more than one book, like Elizabeth in Pride and Prejudice and Frankenstein, or Pip in Great Expectations and Moby-Dick). Each has one or two gold snippets, found by searching the processed text, and the eval refuses to run if any snippet is missing from its book. A hit is any retrieved chunk from the gold book that contains a gold snippet. No book filter is used, so the retriever has to find the book too.
 
 **Ablation.** Each row adds one change.
 
@@ -65,7 +65,7 @@ Writes `evals/results/summary.md`, `retrieval.json` and `validator.json`.
 
 ## Error analysis and the change it led to
 
-I looked at every question the plain BM25 config missed (`npm run eval:explain -- <ids> --baseline` prints the query terms, what the top chunks matched and where the gold chunk ranked). The misses fell into two groups.
+Every question the plain BM25 config missed was examined (`npm run eval:explain -- <ids> --baseline` prints the query terms, what the top chunks matched and where the gold chunk ranked). The misses fell into two groups.
 
 **1. The answer sits one chunk away from the names.** A scene names its people and place, and the event comes a paragraph or two later, in a chunk that shares few or no words with the question:
 
@@ -102,7 +102,7 @@ The text says "criticizing anyone" and "my father", and "You get me a file ... w
 
 After the change, x01's gold chunk is scored (rank 29, from unscored) and d09's is rank 6 (from 24), but neither reaches rank 1, and x03 is still far down. Group 2 did not move: paraphrased R@10 is 25% before and after.
 
-**Held-out check.** The weights above were picked by looking at these same 46 questions, so they could be overfit. After freezing them I wrote 12 new questions (`evals/holdout.json`, 3 per type) and ran every config on them:
+**Held-out check.** The weights above were picked by looking at these same 46 questions, so they could be overfit. After freezing them, 12 new questions were added (`evals/holdout.json`, 3 per type) and every config was run on them:
 
 | config | R@1 | R@5 | R@10 | MRR | Book@1 |
 |---|---|---|---|---|---|
