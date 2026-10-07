@@ -24,7 +24,7 @@ Optional hybrid retrieval: if `OPENAI_API_KEY` is set when you run `npm run embe
 | Shipped config | 34.8% | 58.7% | 65.2% | 0.452 |
 | Shipped config, held-out questions | 41.7% | 58.3% | 58.3% | 0.475 |
 
-The validator caught 320/320 planted fake quotes and passed 136/136 real ones. Keyword search is weak on paraphrased questions (25% R@10). That is the case vector search is for. The hybrid path is built but has no eval numbers yet. See [PROOF.md](PROOF.md) for the error analysis, what changed and what is not verified.
+The validator caught 320/320 planted fake quotes and passed 136/136 real ones. With a real model (`claude-haiku-4-5`, one run over all 58 questions), 62 of 67 quotes passed the check on the first reply, and when a gold passage was among the eight retrieved the model quoted it 34 times out of 35; see `evals/results/model-claude-haiku-4-5.md`. Keyword search is weak on paraphrased questions (25% R@10). That is the case vector search is for. The hybrid path is built but has no eval numbers yet. See [PROOF.md](PROOF.md) for the error analysis, what changed and what is not verified.
 
 ## Run it
 

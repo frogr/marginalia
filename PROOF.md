@@ -170,9 +170,26 @@ Taken with Playwright against the built server (`npm run build && npm run screen
 - `docs/screenshots/reader.png` (1280x800): chapter page with cited paragraphs marked
 - `docs/screenshots/phone.png` (390x844)
 
+## Live model answers
+
+Run on 2026-10-07 with `ANTHROPIC_MODEL=claude-haiku-4-5 npm run eval:model` (`src/eval/model.ts`). All 58 questions, BM25 retrieval, the real pipeline, one retry allowed. Full output in `evals/results/model-claude-haiku-4-5.md` and `.json`.
+
+| | |
+| --- | --- |
+| Questions answered by the model | 58 of 58 (no fallbacks) |
+| Model said not found | 19 (17 of them with no gold passage among the eight retrieved) |
+| Quotes verified in the first reply | 62 of 67 (92.5%) |
+| Answers clean on the first try | 36 of 39 |
+| Retries | 3, the retry fixed everything in 1; 2 answers shown with an unverified quote |
+| Gold passage retrieved and quoted | 34 of 35 |
+| Tokens and cost | 201,859 in, 10,547 out, $0.25 |
+| Latency, retrieve + model + check | p50 1887 ms, p95 5008 ms |
+
+What the quote failures were: 4 not found in the cited passage. The two answers shown with an unverified quote are p11 and d07; both are flagged on the page, not dropped. One run of one model; run-to-run variance was not measured.
+
 ## Not verified
 
-- **Live model answers.** No API keys were available. The Anthropic and OpenAI request shapes, JSON parsing, retry loop and error handling are tested with mocked `fetch`, but no real model has answered a question. How often a real model's quotes pass the validator on the first try is unknown.
+- **OpenAI answers.** Only the Anthropic path has been run live (see above). The OpenAI request shape, JSON parsing and error handling are tested with mocked `fetch`.
 - **Hybrid retrieval.** `npm run embed` and query embedding are tested with mocks only. No embeddings were built, so there are no hybrid eval numbers. The paraphrased-question gap is where it should help most, and that is the first thing to measure once a key is available.
 - **Render deploy.** `render.yaml` follows the Blueprint format and the build and start commands were run locally, but nothing was deployed.
 - **Rate limits and the daily cap** live in memory. They reset on restart and are per instance.

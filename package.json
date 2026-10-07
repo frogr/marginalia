@@ -21,6 +21,7 @@
     "start": "node dist/src/server/index.js",
     "eval": "tsx src/eval/run.ts",
     "eval:explain": "tsx src/eval/explain.ts",
+    "eval:model": "tsx src/eval/model.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "screenshots": "tsx scripts/screenshots.ts"

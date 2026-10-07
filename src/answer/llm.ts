@@ -111,23 +111,32 @@ export async function answerWithModel(
   }
 }
 
-export function anthropicCall(apiKey: string, model: string, timeoutMs: number): ModelCall {
+export interface Usage {
+  inputTokens: number;
+  outputTokens: number;
+}
+
+export function anthropicCall(apiKey: string, model: string, timeoutMs: number, onUsage?: (u: Usage) => void): ModelCall {
   return async (system, user) => {
-    const json = await fetchJson<{ content?: { type: string; text?: string }[] }>("https://api.anthropic.com/v1/messages", {
-      headers: { "x-api-key": apiKey, "anthropic-version": "2023-06-01" },
-      body: { model, max_tokens: 1200, temperature: 0, system, messages: [{ role: "user", content: user }] },
-      timeoutMs,
-      provider: "Anthropic",
-    });
+    const json = await fetchJson<{ content?: { type: string; text?: string }[]; usage?: { input_tokens?: number; output_tokens?: number } }>(
+      "https://api.anthropic.com/v1/messages",
+      {
+        headers: { "x-api-key": apiKey, "anthropic-version": "2023-06-01" },
+        body: { model, max_tokens: 1200, temperature: 0, system, messages: [{ role: "user", content: user }] },
+        timeoutMs,
+        provider: "Anthropic",
+      },
+    );
+    onUsage?.({ inputTokens: json.usage?.input_tokens ?? 0, outputTokens: json.usage?.output_tokens ?? 0 });
     const text = json.content?.find((c) => c.type === "text")?.text;
     if (!text) throw new UpstreamError("bad_response", "Anthropic", undefined, "no text content");
     return text;
   };
 }
 
-export function openaiCall(apiKey: string, model: string, timeoutMs: number): ModelCall {
+export function openaiCall(apiKey: string, model: string, timeoutMs: number, onUsage?: (u: Usage) => void): ModelCall {
   return async (system, user) => {
-    const json = await fetchJson<{ choices?: { message?: { content?: string } }[] }>("https://api.openai.com/v1/chat/completions", {
+    const json = await fetchJson<{ choices?: { message?: { content?: string } }[]; usage?: { prompt_tokens?: number; completion_tokens?: number } }>("https://api.openai.com/v1/chat/completions", {
       headers: { authorization: `Bearer ${apiKey}` },
       body: {
         model,
@@ -142,6 +151,7 @@ export function openaiCall(apiKey: string, model: string, timeoutMs: number): Mo
       timeoutMs,
       provider: "OpenAI",
     });
+    onUsage?.({ inputTokens: json.usage?.prompt_tokens ?? 0, outputTokens: json.usage?.completion_tokens ?? 0 });
     const text = json.choices?.[0]?.message?.content;
     if (!text) throw new UpstreamError("bad_response", "OpenAI", undefined, "no message content");
     return text;
