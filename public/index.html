@@ -6,25 +6,36 @@
 <title>Marginalia</title>
 <meta name="description" content="Ask questions about twelve classic public-domain novels. Answers cite passages, and every quote is checked against the source text.">
 <link rel="icon" href="/favicon.svg">
+<link rel="stylesheet" href="/austn-kit.css">
 <link rel="stylesheet" href="/styles.css">
 <script src="/app.js" defer></script>
 </head>
 <body>
-<header class="top">
-  <a class="mark" href="/">Marginalia</a>
-  <span class="crumb">twelve novels, every quote checked</span>
+<header class="site-header">
+  <div class="wrap">
+    <a class="mark" href="/" aria-label="Marginalia, home"><span class="mark-glyph" aria-hidden="true">m</span><span class="mark-name">Marginalia</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#ask">Ask</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#chips">Books</a></li>
+        <li><a href="https://github.com/frogr/marginalia">Source</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main class="wrap">
   <section class="intro">
-    <h1>Ask the books.</h1>
+    <span class="label">twelve novels, every quote checked</span>
+    <h1 class="squiggle">Ask the books.</h1>
     <p class="lede">Questions about twelve public-domain novels, answered from the text itself. Every quote in an answer is checked word for word against the passage it cites.</p>
   </section>
 
   <form id="ask" class="ask" autocomplete="off">
     <label class="sr" for="q">Your question</label>
-    <input id="q" name="q" type="search" maxlength="400" placeholder="What does Darcy say about Elizabeth at the first ball?" required>
-    <button type="submit" id="go">Ask</button>
+    <input id="q" class="input" name="q" type="search" maxlength="400" placeholder="What does Darcy say about Elizabeth at the first ball?" required>
+    <button type="submit" id="go" class="button">Ask</button>
   </form>
 
   <div class="filters" role="group" aria-label="Limit to books">
@@ -34,15 +45,36 @@
 
   <div id="examples" class="examples">
     <span class="filters-label">Try</span>
-    <div class="example-list"></div>
+    <div class="example-list chips"></div>
   </div>
 
-  <div id="status" class="status" role="status" aria-live="polite"></div>
+  <div id="status" class="status muted" role="status" aria-live="polite"></div>
   <section id="result" class="result" hidden></section>
+
+  <section id="how" class="how-it-works" aria-labelledby="how-title">
+    <h2 id="how-title" class="section-title">How it works</h2>
+    <ol class="steps-home">
+      <li class="panel">
+        <h3>Retrieve</h3>
+        <p>The books are split into paragraph-based chunks of about 240 words that never cross a chapter boundary. Search is BM25, a standard keyword ranking formula.</p>
+      </li>
+      <li class="panel">
+        <h3>Answer</h3>
+        <p>With a model key, a model reads the top passages and gives a quote for every claim. Without one, the answer is the best matching sentences from the best passages.</p>
+      </li>
+      <li class="panel">
+        <h3>Check</h3>
+        <p>Every quote is searched for in the passage it cites. A quote that fails is shown as unverified, never dropped.</p>
+      </li>
+    </ol>
+  </section>
 </main>
 
-<footer class="foot">
-  <p>Texts from <a href="https://www.gutenberg.org/">Project Gutenberg</a>, public domain in the US. Search is BM25 over paragraph-based chunks, with optional vector search. Answers without a model key are extractive: the best sentences from the best passages. Source: <a href="https://github.com/frogr/marginalia">github.com/frogr/marginalia</a>.</p>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>Texts from <a href="https://www.gutenberg.org/">Project Gutenberg</a>, public domain in the US. Source: <a href="https://github.com/frogr/marginalia">github.com/frogr/marginalia</a>.</span>
+    <span class="maker">Made by <a href="https://austn.net">Austin French</a>. Need search and answers over your own documents? <a href="https://austn.net/hire">Here's how that works</a>.</span>
+  </div>
 </footer>
 </body>
 </html>

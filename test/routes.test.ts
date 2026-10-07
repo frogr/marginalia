@@ -123,6 +123,15 @@ describe("routes", () => {
     expect((await app.request("/app.js")).status).toBe(200);
     expect((await app.request("/../package.json")).status).toBe(404);
   });
+
+  it("serves the design kit and its font with content types", async () => {
+    const app = createApp(new Asker(lib, cfg));
+    const css = await app.request("/austn-kit.css");
+    expect(css.headers.get("content-type")).toMatch(/text\/css/);
+    const font = await app.request("/fonts/recursive-latin.woff2");
+    expect(font.status).toBe(200);
+    expect(font.headers.get("content-type")).toBe("font/woff2");
+  });
 });
 
 describe("DailyCounter", () => {

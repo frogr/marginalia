@@ -28,12 +28,15 @@ export function renderChapter(lib: Library, slug: string, chapterNo: number, fro
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(ch.title)} · ${esc(book.title)} · Marginalia</title>
 <link rel="icon" href="/favicon.svg">
+<link rel="stylesheet" href="/austn-kit.css">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body class="reader">
-<header class="top">
-  <a class="mark" href="/">Marginalia</a>
-  <span class="crumb">${esc(book.title)}</span>
+<header class="site-header">
+  <div class="wrap">
+    <a class="mark" href="/" aria-label="Marginalia, home"><span class="mark-glyph" aria-hidden="true">m</span><span class="mark-name">Marginalia</span></a>
+    <span class="crumb muted">${esc(book.title)}</span>
+  </div>
 </header>
 <main class="chapter">
   <p class="eyebrow">${esc(book.title)} · ${esc(book.author)}${translator} · ${book.year}</p>
@@ -43,7 +46,7 @@ export function renderChapter(lib: Library, slug: string, chapterNo: number, fro
 ${paras}
   </article>
   <nav class="chapnav">${prev}${next}</nav>
-  <p class="source">Text from <a href="${esc(book.sourceUrl)}">Project Gutenberg</a> (public domain in the US). Paragraph numbers are Marginalia's.</p>
+  <p class="source muted">Text from <a href="${esc(book.sourceUrl)}">Project Gutenberg</a> (public domain in the US). Paragraph numbers are Marginalia's.</p>
 </main>
 </body>
 </html>`;

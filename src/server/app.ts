@@ -15,14 +15,19 @@ const TYPES: Record<string, string> = {
   ".css": "text/css; charset=utf-8",
   ".svg": "image/svg+xml",
   ".png": "image/png",
+  ".woff2": "font/woff2",
 };
 
-/** The public/ folder is small, so it is read once into memory. */
-function loadStatic(dir = join(ROOT, "public")) {
+/** The public/ folder is small, so it is read once into memory, including fonts/. */
+function loadStatic(dir = join(ROOT, "public"), prefix = "") {
   const files = new Map<string, { body: Buffer; type: string }>();
-  for (const f of readdirSync(dir)) {
-    const type = TYPES[extname(f)];
-    if (type) files.set(`/${f}`, { body: readFileSync(join(dir, f)), type });
+  for (const e of readdirSync(dir, { withFileTypes: true })) {
+    if (e.isDirectory()) {
+      for (const [k, v] of loadStatic(join(dir, e.name), `${prefix}/${e.name}`)) files.set(k, v);
+      continue;
+    }
+    const type = TYPES[extname(e.name)];
+    if (type) files.set(`${prefix}/${e.name}`, { body: readFileSync(join(dir, e.name)), type });
   }
   return files;
 }

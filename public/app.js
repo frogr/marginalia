@@ -38,7 +38,7 @@ async function init() {
   for (const q of EXAMPLES) {
     const b = document.createElement("button");
     b.type = "button";
-    b.className = "example";
+    b.className = "chip example";
     b.textContent = q;
     b.addEventListener("click", () => {
       $("#q").value = q;
@@ -96,7 +96,7 @@ async function ask(push = true) {
   const result = $("#result");
   const go = $("#go");
   go.disabled = true;
-  status.className = "status busy";
+  status.className = "status muted busy";
   status.textContent = selected.size ? `Searching ${selected.size} book${selected.size > 1 ? "s" : ""}…` : "Searching twelve books…";
   if (push) {
     const p = new URLSearchParams({ q: question });
@@ -112,7 +112,7 @@ async function ask(push = true) {
     const data = await res.json().catch(() => ({}));
     if (!res.ok) throw new Error(data.error || "Something went wrong.");
     last = data;
-    status.className = "status";
+    status.className = "status muted";
     status.textContent = "";
     result.innerHTML = renderResult(data);
     result.hidden = false;
@@ -159,7 +159,7 @@ function renderResult(d) {
   const passages = d.retrieval.passages;
   const allOk = a.total > 0 && a.verified === a.total;
   const badge = a.total
-    ? `<span class="badge ${allOk ? "ok" : "warn"}" title="Quotes found word for word in the passage they cite">Verified quotes ${a.verified}/${a.total}</span>`
+    ? `<span class="pill ${allOk ? "pill--good" : "pill--close"}" title="Quotes found word for word in the passage they cite">Verified quotes ${a.verified}/${a.total}</span>`
     : "";
   const mode =
     a.mode === "model"
@@ -190,13 +190,13 @@ function renderResult(d) {
       .join("");
   }
 
-  const notice = a.notice ? `<p class="note">${esc(a.notice)}</p>` : "";
+  const notice = a.notice ? `<p class="note note--warn">${esc(a.notice)}</p>` : "";
   const regen = a.regenerated
     ? `<p class="note">The first draft had ${a.firstAttempt.total - a.firstAttempt.verified} quote${a.firstAttempt.total - a.firstAttempt.verified === 1 ? "" : "s"} that did not match the text, so the model was asked once to fix ${a.firstAttempt.total - a.firstAttempt.verified === 1 ? "it" : "them"}.</p>`
     : "";
 
   return `
-  <article class="answer">
+  <article class="answer panel">
     <div class="answer-head"><span class="mode">${mode}</span>${badge}</div>
     ${notice}${regen}
     <div class="claims">${body}</div>
@@ -228,13 +228,13 @@ function howHtml(d) {
   const checks = a.claims
     .flatMap((c) => c.citations)
     .map(
-      (q) => `<li class="${q.verified ? "ok" : "bad"}"><span class="verdict">${q.verified ? "verified" : "unverified"}</span>
+      (q) => `<li class="${q.verified ? "ok" : "bad"}"><span class="pill ${q.verified ? "pill--good" : "pill--close"}">${q.verified ? "verified" : "unverified"}</span>
         <span class="q">“${esc(q.quote.length > 160 ? q.quote.slice(0, 157) + "…" : q.quote)}”</span>
         <span class="sub">cites passage ${q.n || "?"}${q.verified ? `, found as ${q.pieces.length} exact piece${q.pieces.length > 1 ? "s" : ""}` : `: ${esc(q.reason || "")}${q.foundIn ? ` (it does appear in passage ${q.foundIn})` : ""}`}</span></li>`,
     )
     .join("");
   return `
-  <details class="how">
+  <details class="how panel panel--dashed">
     <summary>How this answer was made</summary>
     <ol class="steps">
       <li><h3>Retrieve</h3><p>${method}${filter}${named} ${r.passages.length} passages in ${d.timings.retrieveMs} ms.${r.note ? " " + esc(r.note) : ""}</p>
