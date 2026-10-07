@@ -1,0 +1,69 @@
+{
+  "fakesCaught": 320,
+  "fakesTotal": 320,
+  "realPassed": 136,
+  "realTotal": 136,
+  "categories": [
+    {
+      "category": "real: exact sentence",
+      "shouldPass": true,
+      "total": 46,
+      "correct": 46
+    },
+    {
+      "category": "real: quote marks, dashes and spacing restyled",
+      "shouldPass": true,
+      "total": 46,
+      "correct": 46
+    },
+    {
+      "category": "real: ellipsis between two exact pieces",
+      "shouldPass": true,
+      "total": 44,
+      "correct": 44
+    },
+    {
+      "category": "fake: invented sentence",
+      "shouldPass": false,
+      "total": 46,
+      "correct": 46
+    },
+    {
+      "category": "fake: one word changed",
+      "shouldPass": false,
+      "total": 46,
+      "correct": 46
+    },
+    {
+      "category": "fake: real quote, wrong passage cited",
+      "shouldPass": false,
+      "total": 46,
+      "correct": 46
+    },
+    {
+      "category": "fake: real piece ... invented piece",
+      "shouldPass": false,
+      "total": 46,
+      "correct": 46
+    },
+    {
+      "category": "fake: real pieces in the wrong order",
+      "shouldPass": false,
+      "total": 44,
+      "correct": 44
+    },
+    {
+      "category": "fake: real text from a passage that was not retrieved",
+      "shouldPass": false,
+      "total": 46,
+      "correct": 46
+    },
+    {
+      "category": "fake: too short to mean anything",
+      "shouldPass": false,
+      "total": 46,
+      "correct": 46
+    }
+  ],
+  "failures": []
+}

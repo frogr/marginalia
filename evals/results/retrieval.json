@@ -1,0 +1,3492 @@
+{
+  "k": 10,
+  "questions": 46,
+  "holdout": 12,
+  "results": [
+    {
+      "config": "bm25",
+      "description": "Plain BM25 (stemming, stopwords), 160-word chunks",
+      "chunks": 10054,
+      "overall": {
+        "n": 46,
+        "r1": 30.4,
+        "r5": 52.2,
+        "r10": 56.5,
+        "book1": 89.1,
+        "mrr": 0.392
+      },
+      "byType": {
+        "direct": {
+          "n": 12,
+          "r1": 58.3,
+          "r5": 83.3,
+          "r10": 91.7,
+          "book1": 100,
+          "mrr": 0.681
+        },
+        "paraphrased": {
+          "n": 12,
+          "r1": 8.3,
+          "r5": 25,
+          "r10": 25,
+          "book1": 91.7,
+          "mrr": 0.142
+        },
+        "name-free": {
+          "n": 10,
+          "r1": 40,
+          "r5": 70,
+          "r10": 80,
+          "book1": 90,
+          "mrr": 0.533
+        },
+        "cross-book": {
+          "n": 12,
+          "r1": 16.7,
+          "r5": 33.3,
+          "r10": 33.3,
+          "book1": 75,
+          "mrr": 0.236
+        }
+      },
+      "holdout": {
+        "n": 12,
+        "r1": 25,
+        "r5": 58.3,
+        "r10": 58.3,
+        "book1": 66.7,
+        "mrr": 0.354
+      },
+      "perQuestion": [
+        {
+          "id": "d01",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:0:0",
+            "moby-dick:40:0",
+            "moby-dick:101:0"
+          ]
+        },
+        {
+          "id": "d02",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:0:0",
+            "great-expectations:27:16",
+            "dracula:13:39"
+          ]
+        },
+        {
+          "id": "d03",
+          "type": "direct",
+          "rank": 4,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:8:8",
+            "a-tale-of-two-cities:1:0",
+            "a-tale-of-two-cities:8:28"
+          ]
+        },
+        {
+          "id": "d04",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:0:11",
+            "alice-in-wonderland:3:11",
+            "alice-in-wonderland:0:10"
+          ]
+        },
+        {
+          "id": "d05",
+          "type": "direct",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:6:25",
+            "the-picture-of-dorian-gray:1:25",
+            "the-picture-of-dorian-gray:1:34"
+          ]
+        },
+        {
+          "id": "d06",
+          "type": "direct",
+          "rank": 4,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:23:3",
+            "jane-eyre:36:35",
+            "jane-eyre:22:15"
+          ]
+        },
+        {
+          "id": "d07",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "the-great-gatsby:4:22",
+            "the-great-gatsby:8:31",
+            "the-great-gatsby:4:21"
+          ]
+        },
+        {
+          "id": "d08",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "dracula:1:3",
+            "dracula:0:6",
+            "dracula:23:4"
+          ]
+        },
+        {
+          "id": "d09",
+          "type": "direct",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "crime-and-punishment:38:21",
+            "crime-and-punishment:6:7",
+            "crime-and-punishment:11:17"
+          ]
+        },
+        {
+          "id": "d10",
+          "type": "direct",
+          "rank": 6,
+          "bookAt1": true,
+          "top": [
+            "great-expectations:10:0",
+            "great-expectations:7:15",
+            "great-expectations:10:13"
+          ]
+        },
+        {
+          "id": "d11",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "little-women:0:0",
+            "little-women:3:0",
+            "little-women:1:0"
+          ]
+        },
+        {
+          "id": "d12",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:8:0",
+            "alice-in-wonderland:0:12",
+            "jane-eyre:10:11"
+          ]
+        },
+        {
+          "id": "p01",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "the-great-gatsby:0:31",
+            "a-tale-of-two-cities:7:2",
+            "the-picture-of-dorian-gray:3:24"
+          ]
+        },
+        {
+          "id": "p02",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:101:0",
+            "frankenstein:6:9",
+            "crime-and-punishment:38:1"
+          ]
+        },
+        {
+          "id": "p03",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:9:13",
+            "pride-and-prejudice:8:9",
+            "pride-and-prejudice:17:4"
+          ]
+        },
+        {
+          "id": "p04",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "moby-dick:88:2",
+            "moby-dick:86:15",
+            "moby-dick:88:0"
+          ]
+        },
+        {
+          "id": "p05",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:20:7",
+            "pride-and-prejudice:18:10",
+            "frankenstein:20:0"
+          ]
+        },
+        {
+          "id": "p06",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:5:5",
+            "alice-in-wonderland:7:12",
+            "alice-in-wonderland:7:10"
+          ]
+        },
+        {
+          "id": "p07",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:38:13",
+            "a-tale-of-two-cities:10:1",
+            "a-tale-of-two-cities:10:8"
+          ]
+        },
+        {
+          "id": "p08",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:20:9",
+            "jane-eyre:3:27",
+            "jane-eyre:0:7"
+          ]
+        },
+        {
+          "id": "p09",
+          "type": "paraphrased",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "great-expectations:38:18",
+            "great-expectations:16:6",
+            "moby-dick:109:10"
+          ]
+        },
+        {
+          "id": "p10",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:5:10",
+            "the-picture-of-dorian-gray:7:10",
+            "the-picture-of-dorian-gray:15:14"
+          ]
+        },
+        {
+          "id": "p11",
+          "type": "paraphrased",
+          "rank": 5,
+          "bookAt1": true,
+          "top": [
+            "crime-and-punishment:23:34",
+            "crime-and-punishment:23:26",
+            "crime-and-punishment:23:17"
+          ]
+        },
+        {
+          "id": "p12",
+          "type": "paraphrased",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "little-women:14:12",
+            "little-women:14:13",
+            "little-women:14:14"
+          ]
+        },
+        {
+          "id": "n01",
+          "type": "name-free",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:12:5",
+            "the-picture-of-dorian-gray:6:25",
+            "the-picture-of-dorian-gray:1:5"
+          ]
+        },
+        {
+          "id": "n02",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:0:0",
+            "alice-in-wonderland:10:12",
+            "alice-in-wonderland:1:2"
+          ]
+        },
+        {
+          "id": "n03",
+          "type": "name-free",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "the-great-gatsby:2:16",
+            "little-women:23:25",
+            "the-picture-of-dorian-gray:16:5"
+          ]
+        },
+        {
+          "id": "n04",
+          "type": "name-free",
+          "rank": 3,
+          "bookAt1": false,
+          "top": [
+            "the-picture-of-dorian-gray:19:7",
+            "frankenstein:11:13",
+            "crime-and-punishment:38:10"
+          ]
+        },
+        {
+          "id": "n05",
+          "type": "name-free",
+          "rank": 6,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:18:3",
+            "moby-dick:99:4",
+            "moby-dick:15:9"
+          ]
+        },
+        {
+          "id": "n06",
+          "type": "name-free",
+          "rank": 3,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:11:3",
+            "crime-and-punishment:12:41",
+            "jane-eyre:10:38"
+          ]
+        },
+        {
+          "id": "n07",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:3:0",
+            "frankenstein:27:12",
+            "frankenstein:3:1"
+          ]
+        },
+        {
+          "id": "n08",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "dracula:1:25",
+            "dracula:1:26",
+            "dracula:1:9"
+          ]
+        },
+        {
+          "id": "n09",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "little-women:0:16",
+            "little-women:1:16",
+            "little-women:0:17"
+          ]
+        },
+        {
+          "id": "n10",
+          "type": "name-free",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "great-expectations:7:22",
+            "moby-dick:86:18",
+            "crime-and-punishment:31:19"
+          ]
+        },
+        {
+          "id": "x01",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:25:13",
+            "pride-and-prejudice:50:0",
+            "frankenstein:23:8"
+          ]
+        },
+        {
+          "id": "x02",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:6:3",
+            "pride-and-prejudice:59:2",
+            "pride-and-prejudice:52:6"
+          ]
+        },
+        {
+          "id": "x03",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "dracula:14:23",
+            "dracula:15:15",
+            "dracula:26:26"
+          ]
+        },
+        {
+          "id": "x04",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:8:16",
+            "a-tale-of-two-cities:38:27",
+            "a-tale-of-two-cities:33:6"
+          ]
+        },
+        {
+          "id": "x05",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "moby-dick:114:3",
+            "dracula:23:6",
+            "dracula:23:7"
+          ]
+        },
+        {
+          "id": "x06",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "frankenstein:8:10",
+            "jane-eyre:8:11",
+            "jane-eyre:8:12"
+          ]
+        },
+        {
+          "id": "x07",
+          "type": "cross-book",
+          "rank": 3,
+          "bookAt1": true,
+          "top": [
+            "little-women:7:6",
+            "little-women:7:7",
+            "little-women:7:8"
+          ]
+        },
+        {
+          "id": "x08",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "frankenstein:5:5",
+            "frankenstein:26:9",
+            "moby-dick:40:9"
+          ]
+        },
+        {
+          "id": "x09",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:92:6",
+            "great-expectations:19:2",
+            "great-expectations:44:5"
+          ]
+        },
+        {
+          "id": "x10",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:19:4",
+            "pride-and-prejudice:56:7",
+            "frankenstein:11:11"
+          ]
+        },
+        {
+          "id": "x11",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:8:2",
+            "jane-eyre:1:5",
+            "jane-eyre:19:8"
+          ]
+        },
+        {
+          "id": "x12",
+          "type": "cross-book",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:35:5",
+            "moby-dick:35:4",
+            "a-tale-of-two-cities:12:16"
+          ]
+        }
+      ],
+      "holdoutPerQuestion": [
+        {
+          "id": "h01",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:22:15",
+            "pride-and-prejudice:7:8",
+            "jane-eyre:26:38"
+          ]
+        },
+        {
+          "id": "h02",
+          "type": "direct",
+          "rank": 3,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:18:0",
+            "the-picture-of-dorian-gray:18:1",
+            "the-picture-of-dorian-gray:1:9"
+          ]
+        },
+        {
+          "id": "h03",
+          "type": "direct",
+          "rank": 3,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:5:5",
+            "alice-in-wonderland:7:12",
+            "alice-in-wonderland:5:14"
+          ]
+        },
+        {
+          "id": "h04",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:16:1",
+            "moby-dick:92:0",
+            "moby-dick:48:4"
+          ]
+        },
+        {
+          "id": "h05",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:60:5",
+            "pride-and-prejudice:10:6",
+            "pride-and-prejudice:8:7"
+          ]
+        },
+        {
+          "id": "h06",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "dracula:11:10",
+            "the-great-gatsby:0:31",
+            "the-great-gatsby:0:22"
+          ]
+        },
+        {
+          "id": "h07",
+          "type": "name-free",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "a-tale-of-two-cities:34:3",
+            "frankenstein:19:3",
+            "dracula:3:26"
+          ]
+        },
+        {
+          "id": "h08",
+          "type": "name-free",
+          "rank": 4,
+          "bookAt1": false,
+          "top": [
+            "a-tale-of-two-cities:41:7",
+            "crime-and-punishment:30:3",
+            "a-tale-of-two-cities:39:36"
+          ]
+        },
+        {
+          "id": "h09",
+          "type": "name-free",
+          "rank": 3,
+          "bookAt1": true,
+          "top": [
+            "crime-and-punishment:4:11",
+            "crime-and-punishment:4:8",
+            "crime-and-punishment:4:9"
+          ]
+        },
+        {
+          "id": "h10",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:21:19",
+            "a-tale-of-two-cities:14:16",
+            "a-tale-of-two-cities:29:10"
+          ]
+        },
+        {
+          "id": "h11",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "the-great-gatsby:3:33",
+            "little-women:1:24",
+            "little-women:11:7"
+          ]
+        },
+        {
+          "id": "h12",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:7:7",
+            "alice-in-wonderland:7:8",
+            "little-women:11:13"
+          ]
+        }
+      ]
+    },
+    {
+      "config": "+phrase",
+      "description": "+ adjacent-term phrase boost",
+      "chunks": 10054,
+      "overall": {
+        "n": 46,
+        "r1": 34.8,
+        "r5": 50,
+        "r10": 56.5,
+        "book1": 89.1,
+        "mrr": 0.416
+      },
+      "byType": {
+        "direct": {
+          "n": 12,
+          "r1": 75,
+          "r5": 75,
+          "r10": 91.7,
+          "book1": 100,
+          "mrr": 0.774
+        },
+        "paraphrased": {
+          "n": 12,
+          "r1": 8.3,
+          "r5": 16.7,
+          "r10": 25,
+          "book1": 91.7,
+          "mrr": 0.139
+        },
+        "name-free": {
+          "n": 10,
+          "r1": 40,
+          "r5": 80,
+          "r10": 80,
+          "book1": 90,
+          "mrr": 0.537
+        },
+        "cross-book": {
+          "n": 12,
+          "r1": 16.7,
+          "r5": 33.3,
+          "r10": 33.3,
+          "book1": 75,
+          "mrr": 0.236
+        }
+      },
+      "holdout": {
+        "n": 12,
+        "r1": 33.3,
+        "r5": 58.3,
+        "r10": 58.3,
+        "book1": 66.7,
+        "mrr": 0.394
+      },
+      "perQuestion": [
+        {
+          "id": "d01",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:0:0",
+            "moby-dick:40:0",
+            "moby-dick:101:0"
+          ]
+        },
+        {
+          "id": "d02",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:0:0",
+            "great-expectations:27:16",
+            "dracula:13:39"
+          ]
+        },
+        {
+          "id": "d03",
+          "type": "direct",
+          "rank": 8,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:8:8",
+            "a-tale-of-two-cities:1:0",
+            "a-tale-of-two-cities:8:28"
+          ]
+        },
+        {
+          "id": "d04",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:0:11",
+            "alice-in-wonderland:3:11",
+            "alice-in-wonderland:0:10"
+          ]
+        },
+        {
+          "id": "d05",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:1:25",
+            "the-picture-of-dorian-gray:6:25",
+            "the-picture-of-dorian-gray:1:34"
+          ]
+        },
+        {
+          "id": "d06",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:37:0",
+            "jane-eyre:23:3",
+            "jane-eyre:36:37"
+          ]
+        },
+        {
+          "id": "d07",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "the-great-gatsby:4:22",
+            "the-great-gatsby:4:21",
+            "the-great-gatsby:8:31"
+          ]
+        },
+        {
+          "id": "d08",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "dracula:1:3",
+            "dracula:0:6",
+            "dracula:23:4"
+          ]
+        },
+        {
+          "id": "d09",
+          "type": "direct",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "crime-and-punishment:38:21",
+            "crime-and-punishment:11:17",
+            "crime-and-punishment:6:7"
+          ]
+        },
+        {
+          "id": "d10",
+          "type": "direct",
+          "rank": 6,
+          "bookAt1": true,
+          "top": [
+            "great-expectations:10:0",
+            "great-expectations:7:15",
+            "great-expectations:16:0"
+          ]
+        },
+        {
+          "id": "d11",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "little-women:0:0",
+            "little-women:3:0",
+            "little-women:1:0"
+          ]
+        },
+        {
+          "id": "d12",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:8:0",
+            "alice-in-wonderland:0:12",
+            "jane-eyre:10:11"
+          ]
+        },
+        {
+          "id": "p01",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "the-great-gatsby:0:31",
+            "a-tale-of-two-cities:7:2",
+            "the-picture-of-dorian-gray:3:24"
+          ]
+        },
+        {
+          "id": "p02",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:101:0",
+            "frankenstein:6:9",
+            "crime-and-punishment:38:1"
+          ]
+        },
+        {
+          "id": "p03",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:9:13",
+            "pride-and-prejudice:8:9",
+            "pride-and-prejudice:17:4"
+          ]
+        },
+        {
+          "id": "p04",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "moby-dick:88:2",
+            "moby-dick:88:0",
+            "moby-dick:86:15"
+          ]
+        },
+        {
+          "id": "p05",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:20:7",
+            "pride-and-prejudice:18:10",
+            "frankenstein:20:0"
+          ]
+        },
+        {
+          "id": "p06",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:5:5",
+            "alice-in-wonderland:7:12",
+            "alice-in-wonderland:7:10"
+          ]
+        },
+        {
+          "id": "p07",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:38:13",
+            "a-tale-of-two-cities:10:1",
+            "a-tale-of-two-cities:10:8"
+          ]
+        },
+        {
+          "id": "p08",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:20:9",
+            "jane-eyre:3:27",
+            "jane-eyre:0:7"
+          ]
+        },
+        {
+          "id": "p09",
+          "type": "paraphrased",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "great-expectations:38:18",
+            "great-expectations:16:6",
+            "moby-dick:109:10"
+          ]
+        },
+        {
+          "id": "p10",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:5:10",
+            "the-picture-of-dorian-gray:7:10",
+            "the-picture-of-dorian-gray:15:14"
+          ]
+        },
+        {
+          "id": "p11",
+          "type": "paraphrased",
+          "rank": 6,
+          "bookAt1": true,
+          "top": [
+            "crime-and-punishment:23:34",
+            "crime-and-punishment:39:6",
+            "crime-and-punishment:23:26"
+          ]
+        },
+        {
+          "id": "p12",
+          "type": "paraphrased",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "little-women:14:12",
+            "little-women:14:13",
+            "little-women:2:25"
+          ]
+        },
+        {
+          "id": "n01",
+          "type": "name-free",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:12:5",
+            "the-picture-of-dorian-gray:6:25",
+            "the-picture-of-dorian-gray:1:5"
+          ]
+        },
+        {
+          "id": "n02",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:0:0",
+            "alice-in-wonderland:10:12",
+            "great-expectations:38:20"
+          ]
+        },
+        {
+          "id": "n03",
+          "type": "name-free",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "the-great-gatsby:2:16",
+            "little-women:23:25",
+            "the-picture-of-dorian-gray:16:5"
+          ]
+        },
+        {
+          "id": "n04",
+          "type": "name-free",
+          "rank": 3,
+          "bookAt1": false,
+          "top": [
+            "the-picture-of-dorian-gray:19:7",
+            "frankenstein:11:13",
+            "crime-and-punishment:38:10"
+          ]
+        },
+        {
+          "id": "n05",
+          "type": "name-free",
+          "rank": 5,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:18:3",
+            "moby-dick:99:4",
+            "moby-dick:15:9"
+          ]
+        },
+        {
+          "id": "n06",
+          "type": "name-free",
+          "rank": 3,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:11:3",
+            "crime-and-punishment:12:41",
+            "jane-eyre:10:38"
+          ]
+        },
+        {
+          "id": "n07",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:3:0",
+            "frankenstein:27:12",
+            "frankenstein:3:1"
+          ]
+        },
+        {
+          "id": "n08",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "dracula:1:25",
+            "dracula:1:26",
+            "dracula:1:9"
+          ]
+        },
+        {
+          "id": "n09",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "little-women:0:16",
+            "little-women:1:16",
+            "little-women:0:17"
+          ]
+        },
+        {
+          "id": "n10",
+          "type": "name-free",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "great-expectations:7:22",
+            "moby-dick:86:18",
+            "crime-and-punishment:31:19"
+          ]
+        },
+        {
+          "id": "x01",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:25:13",
+            "pride-and-prejudice:50:0",
+            "frankenstein:23:8"
+          ]
+        },
+        {
+          "id": "x02",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:6:3",
+            "pride-and-prejudice:59:2",
+            "pride-and-prejudice:52:6"
+          ]
+        },
+        {
+          "id": "x03",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "dracula:14:23",
+            "dracula:15:15",
+            "dracula:26:26"
+          ]
+        },
+        {
+          "id": "x04",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:8:16",
+            "a-tale-of-two-cities:38:27",
+            "a-tale-of-two-cities:33:6"
+          ]
+        },
+        {
+          "id": "x05",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "dracula:23:6",
+            "moby-dick:114:3",
+            "dracula:23:7"
+          ]
+        },
+        {
+          "id": "x06",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "frankenstein:8:10",
+            "jane-eyre:8:11",
+            "jane-eyre:8:12"
+          ]
+        },
+        {
+          "id": "x07",
+          "type": "cross-book",
+          "rank": 3,
+          "bookAt1": true,
+          "top": [
+            "little-women:7:6",
+            "little-women:7:7",
+            "little-women:7:8"
+          ]
+        },
+        {
+          "id": "x08",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "frankenstein:5:5",
+            "frankenstein:26:9",
+            "moby-dick:40:9"
+          ]
+        },
+        {
+          "id": "x09",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:92:6",
+            "great-expectations:19:2",
+            "great-expectations:3:8"
+          ]
+        },
+        {
+          "id": "x10",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:19:4",
+            "pride-and-prejudice:56:7",
+            "frankenstein:11:11"
+          ]
+        },
+        {
+          "id": "x11",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:8:2",
+            "jane-eyre:1:5",
+            "little-women:17:21"
+          ]
+        },
+        {
+          "id": "x12",
+          "type": "cross-book",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:35:5",
+            "moby-dick:35:4",
+            "a-tale-of-two-cities:12:16"
+          ]
+        }
+      ],
+      "holdoutPerQuestion": [
+        {
+          "id": "h01",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:22:15",
+            "crime-and-punishment:20:21",
+            "pride-and-prejudice:7:8"
+          ]
+        },
+        {
+          "id": "h02",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:1:9",
+            "the-picture-of-dorian-gray:18:0",
+            "the-picture-of-dorian-gray:18:1"
+          ]
+        },
+        {
+          "id": "h03",
+          "type": "direct",
+          "rank": 5,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:5:5",
+            "alice-in-wonderland:7:12",
+            "alice-in-wonderland:7:10"
+          ]
+        },
+        {
+          "id": "h04",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:16:1",
+            "moby-dick:92:0",
+            "moby-dick:48:4"
+          ]
+        },
+        {
+          "id": "h05",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:60:5",
+            "pride-and-prejudice:10:6",
+            "pride-and-prejudice:8:7"
+          ]
+        },
+        {
+          "id": "h06",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "frankenstein:27:49",
+            "dracula:11:10",
+            "the-great-gatsby:0:31"
+          ]
+        },
+        {
+          "id": "h07",
+          "type": "name-free",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "a-tale-of-two-cities:34:3",
+            "frankenstein:19:3",
+            "dracula:3:26"
+          ]
+        },
+        {
+          "id": "h08",
+          "type": "name-free",
+          "rank": 5,
+          "bookAt1": false,
+          "top": [
+            "crime-and-punishment:30:3",
+            "a-tale-of-two-cities:41:7",
+            "a-tale-of-two-cities:39:36"
+          ]
+        },
+        {
+          "id": "h09",
+          "type": "name-free",
+          "rank": 3,
+          "bookAt1": true,
+          "top": [
+            "crime-and-punishment:4:11",
+            "crime-and-punishment:4:8",
+            "crime-and-punishment:4:9"
+          ]
+        },
+        {
+          "id": "h10",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:21:19",
+            "a-tale-of-two-cities:14:16",
+            "a-tale-of-two-cities:29:10"
+          ]
+        },
+        {
+          "id": "h11",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "the-great-gatsby:3:33",
+            "little-women:1:24",
+            "little-women:11:7"
+          ]
+        },
+        {
+          "id": "h12",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:7:7",
+            "alice-in-wonderland:7:8",
+            "little-women:11:13"
+          ]
+        }
+      ]
+    },
+    {
+      "config": "+title",
+      "description": "+ boost for books named in the question",
+      "chunks": 10054,
+      "overall": {
+        "n": 46,
+        "r1": 34.8,
+        "r5": 50,
+        "r10": 56.5,
+        "book1": 89.1,
+        "mrr": 0.416
+      },
+      "byType": {
+        "direct": {
+          "n": 12,
+          "r1": 75,
+          "r5": 75,
+          "r10": 91.7,
+          "book1": 100,
+          "mrr": 0.774
+        },
+        "paraphrased": {
+          "n": 12,
+          "r1": 8.3,
+          "r5": 16.7,
+          "r10": 25,
+          "book1": 91.7,
+          "mrr": 0.139
+        },
+        "name-free": {
+          "n": 10,
+          "r1": 40,
+          "r5": 80,
+          "r10": 80,
+          "book1": 90,
+          "mrr": 0.537
+        },
+        "cross-book": {
+          "n": 12,
+          "r1": 16.7,
+          "r5": 33.3,
+          "r10": 33.3,
+          "book1": 75,
+          "mrr": 0.236
+        }
+      },
+      "holdout": {
+        "n": 12,
+        "r1": 33.3,
+        "r5": 58.3,
+        "r10": 58.3,
+        "book1": 66.7,
+        "mrr": 0.394
+      },
+      "perQuestion": [
+        {
+          "id": "d01",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:0:0",
+            "moby-dick:40:0",
+            "moby-dick:101:0"
+          ]
+        },
+        {
+          "id": "d02",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:0:0",
+            "great-expectations:27:16",
+            "dracula:13:39"
+          ]
+        },
+        {
+          "id": "d03",
+          "type": "direct",
+          "rank": 8,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:8:8",
+            "a-tale-of-two-cities:1:0",
+            "a-tale-of-two-cities:8:28"
+          ]
+        },
+        {
+          "id": "d04",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:0:11",
+            "alice-in-wonderland:3:11",
+            "alice-in-wonderland:0:10"
+          ]
+        },
+        {
+          "id": "d05",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:1:25",
+            "the-picture-of-dorian-gray:6:25",
+            "the-picture-of-dorian-gray:1:34"
+          ]
+        },
+        {
+          "id": "d06",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:37:0",
+            "jane-eyre:23:3",
+            "jane-eyre:36:37"
+          ]
+        },
+        {
+          "id": "d07",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "the-great-gatsby:4:22",
+            "the-great-gatsby:4:21",
+            "the-great-gatsby:8:31"
+          ]
+        },
+        {
+          "id": "d08",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "dracula:1:3",
+            "dracula:0:6",
+            "dracula:23:4"
+          ]
+        },
+        {
+          "id": "d09",
+          "type": "direct",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "crime-and-punishment:38:21",
+            "crime-and-punishment:11:17",
+            "crime-and-punishment:6:7"
+          ]
+        },
+        {
+          "id": "d10",
+          "type": "direct",
+          "rank": 6,
+          "bookAt1": true,
+          "top": [
+            "great-expectations:10:0",
+            "great-expectations:7:15",
+            "great-expectations:16:0"
+          ]
+        },
+        {
+          "id": "d11",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "little-women:0:0",
+            "little-women:3:0",
+            "little-women:1:0"
+          ]
+        },
+        {
+          "id": "d12",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:8:0",
+            "alice-in-wonderland:0:12",
+            "jane-eyre:10:11"
+          ]
+        },
+        {
+          "id": "p01",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "the-great-gatsby:0:31",
+            "a-tale-of-two-cities:7:2",
+            "the-picture-of-dorian-gray:3:24"
+          ]
+        },
+        {
+          "id": "p02",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:101:0",
+            "frankenstein:6:9",
+            "crime-and-punishment:38:1"
+          ]
+        },
+        {
+          "id": "p03",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:9:13",
+            "pride-and-prejudice:8:9",
+            "pride-and-prejudice:17:4"
+          ]
+        },
+        {
+          "id": "p04",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "moby-dick:88:2",
+            "moby-dick:88:0",
+            "moby-dick:86:15"
+          ]
+        },
+        {
+          "id": "p05",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:20:7",
+            "pride-and-prejudice:18:10",
+            "frankenstein:20:0"
+          ]
+        },
+        {
+          "id": "p06",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:5:5",
+            "alice-in-wonderland:7:12",
+            "alice-in-wonderland:7:10"
+          ]
+        },
+        {
+          "id": "p07",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:38:13",
+            "a-tale-of-two-cities:10:1",
+            "a-tale-of-two-cities:10:8"
+          ]
+        },
+        {
+          "id": "p08",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:20:9",
+            "jane-eyre:3:27",
+            "jane-eyre:0:7"
+          ]
+        },
+        {
+          "id": "p09",
+          "type": "paraphrased",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "great-expectations:38:18",
+            "great-expectations:16:6",
+            "moby-dick:109:10"
+          ]
+        },
+        {
+          "id": "p10",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:5:10",
+            "the-picture-of-dorian-gray:7:10",
+            "the-picture-of-dorian-gray:15:14"
+          ]
+        },
+        {
+          "id": "p11",
+          "type": "paraphrased",
+          "rank": 6,
+          "bookAt1": true,
+          "top": [
+            "crime-and-punishment:23:34",
+            "crime-and-punishment:39:6",
+            "crime-and-punishment:23:26"
+          ]
+        },
+        {
+          "id": "p12",
+          "type": "paraphrased",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "little-women:14:12",
+            "little-women:14:13",
+            "little-women:2:25"
+          ]
+        },
+        {
+          "id": "n01",
+          "type": "name-free",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:12:5",
+            "the-picture-of-dorian-gray:6:25",
+            "the-picture-of-dorian-gray:1:5"
+          ]
+        },
+        {
+          "id": "n02",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:0:0",
+            "alice-in-wonderland:10:12",
+            "great-expectations:38:20"
+          ]
+        },
+        {
+          "id": "n03",
+          "type": "name-free",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "the-great-gatsby:2:16",
+            "little-women:23:25",
+            "the-picture-of-dorian-gray:16:5"
+          ]
+        },
+        {
+          "id": "n04",
+          "type": "name-free",
+          "rank": 3,
+          "bookAt1": false,
+          "top": [
+            "the-picture-of-dorian-gray:19:7",
+            "frankenstein:11:13",
+            "crime-and-punishment:38:10"
+          ]
+        },
+        {
+          "id": "n05",
+          "type": "name-free",
+          "rank": 5,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:18:3",
+            "moby-dick:99:4",
+            "moby-dick:15:9"
+          ]
+        },
+        {
+          "id": "n06",
+          "type": "name-free",
+          "rank": 3,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:11:3",
+            "crime-and-punishment:12:41",
+            "jane-eyre:10:38"
+          ]
+        },
+        {
+          "id": "n07",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:3:0",
+            "frankenstein:27:12",
+            "frankenstein:3:1"
+          ]
+        },
+        {
+          "id": "n08",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "dracula:1:25",
+            "dracula:1:26",
+            "dracula:1:9"
+          ]
+        },
+        {
+          "id": "n09",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "little-women:0:16",
+            "little-women:1:16",
+            "little-women:0:17"
+          ]
+        },
+        {
+          "id": "n10",
+          "type": "name-free",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "great-expectations:7:22",
+            "moby-dick:86:18",
+            "crime-and-punishment:31:19"
+          ]
+        },
+        {
+          "id": "x01",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:25:13",
+            "pride-and-prejudice:50:0",
+            "frankenstein:23:8"
+          ]
+        },
+        {
+          "id": "x02",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:6:3",
+            "pride-and-prejudice:59:2",
+            "pride-and-prejudice:52:6"
+          ]
+        },
+        {
+          "id": "x03",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "dracula:14:23",
+            "dracula:15:15",
+            "dracula:26:26"
+          ]
+        },
+        {
+          "id": "x04",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:8:16",
+            "a-tale-of-two-cities:38:27",
+            "a-tale-of-two-cities:33:6"
+          ]
+        },
+        {
+          "id": "x05",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "dracula:23:6",
+            "moby-dick:114:3",
+            "dracula:23:7"
+          ]
+        },
+        {
+          "id": "x06",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "frankenstein:8:10",
+            "jane-eyre:8:11",
+            "jane-eyre:8:12"
+          ]
+        },
+        {
+          "id": "x07",
+          "type": "cross-book",
+          "rank": 3,
+          "bookAt1": true,
+          "top": [
+            "little-women:7:6",
+            "little-women:7:7",
+            "little-women:7:8"
+          ]
+        },
+        {
+          "id": "x08",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "frankenstein:5:5",
+            "frankenstein:26:9",
+            "moby-dick:40:9"
+          ]
+        },
+        {
+          "id": "x09",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:92:6",
+            "great-expectations:19:2",
+            "great-expectations:3:8"
+          ]
+        },
+        {
+          "id": "x10",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:19:4",
+            "pride-and-prejudice:56:7",
+            "frankenstein:11:11"
+          ]
+        },
+        {
+          "id": "x11",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:8:2",
+            "jane-eyre:1:5",
+            "little-women:17:21"
+          ]
+        },
+        {
+          "id": "x12",
+          "type": "cross-book",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:35:5",
+            "moby-dick:35:4",
+            "a-tale-of-two-cities:12:16"
+          ]
+        }
+      ],
+      "holdoutPerQuestion": [
+        {
+          "id": "h01",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:22:15",
+            "crime-and-punishment:20:21",
+            "pride-and-prejudice:7:8"
+          ]
+        },
+        {
+          "id": "h02",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:1:9",
+            "the-picture-of-dorian-gray:18:0",
+            "the-picture-of-dorian-gray:18:1"
+          ]
+        },
+        {
+          "id": "h03",
+          "type": "direct",
+          "rank": 5,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:5:5",
+            "alice-in-wonderland:7:12",
+            "alice-in-wonderland:7:10"
+          ]
+        },
+        {
+          "id": "h04",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:16:1",
+            "moby-dick:92:0",
+            "moby-dick:48:4"
+          ]
+        },
+        {
+          "id": "h05",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:60:5",
+            "pride-and-prejudice:10:6",
+            "pride-and-prejudice:8:7"
+          ]
+        },
+        {
+          "id": "h06",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "frankenstein:27:49",
+            "dracula:11:10",
+            "the-great-gatsby:0:31"
+          ]
+        },
+        {
+          "id": "h07",
+          "type": "name-free",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "a-tale-of-two-cities:34:3",
+            "frankenstein:19:3",
+            "dracula:3:26"
+          ]
+        },
+        {
+          "id": "h08",
+          "type": "name-free",
+          "rank": 5,
+          "bookAt1": false,
+          "top": [
+            "crime-and-punishment:30:3",
+            "a-tale-of-two-cities:41:7",
+            "a-tale-of-two-cities:39:36"
+          ]
+        },
+        {
+          "id": "h09",
+          "type": "name-free",
+          "rank": 3,
+          "bookAt1": true,
+          "top": [
+            "crime-and-punishment:4:11",
+            "crime-and-punishment:4:8",
+            "crime-and-punishment:4:9"
+          ]
+        },
+        {
+          "id": "h10",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:21:19",
+            "a-tale-of-two-cities:14:16",
+            "a-tale-of-two-cities:29:10"
+          ]
+        },
+        {
+          "id": "h11",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "the-great-gatsby:3:33",
+            "little-women:1:24",
+            "little-women:11:7"
+          ]
+        },
+        {
+          "id": "h12",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:7:7",
+            "alice-in-wonderland:7:8",
+            "little-women:11:13"
+          ]
+        }
+      ]
+    },
+    {
+      "config": "+240w chunks",
+      "description": "+ 240-word chunks instead of 160",
+      "chunks": 7107,
+      "overall": {
+        "n": 46,
+        "r1": 28.3,
+        "r5": 56.5,
+        "r10": 63,
+        "book1": 84.8,
+        "mrr": 0.397
+      },
+      "byType": {
+        "direct": {
+          "n": 12,
+          "r1": 66.7,
+          "r5": 91.7,
+          "r10": 100,
+          "book1": 100,
+          "mrr": 0.764
+        },
+        "paraphrased": {
+          "n": 12,
+          "r1": 0,
+          "r5": 16.7,
+          "r10": 25,
+          "book1": 91.7,
+          "mrr": 0.095
+        },
+        "name-free": {
+          "n": 10,
+          "r1": 40,
+          "r5": 70,
+          "r10": 80,
+          "book1": 80,
+          "mrr": 0.531
+        },
+        "cross-book": {
+          "n": 12,
+          "r1": 8.3,
+          "r5": 50,
+          "r10": 50,
+          "book1": 66.7,
+          "mrr": 0.221
+        }
+      },
+      "holdout": {
+        "n": 12,
+        "r1": 50,
+        "r5": 50,
+        "r10": 58.3,
+        "book1": 83.3,
+        "mrr": 0.514
+      },
+      "perQuestion": [
+        {
+          "id": "d01",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:0:0",
+            "moby-dick:40:0",
+            "moby-dick:15:18"
+          ]
+        },
+        {
+          "id": "d02",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:0:0",
+            "great-expectations:27:9",
+            "dracula:13:26"
+          ]
+        },
+        {
+          "id": "d03",
+          "type": "direct",
+          "rank": 4,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:1:5",
+            "a-tale-of-two-cities:8:6",
+            "a-tale-of-two-cities:1:6"
+          ]
+        },
+        {
+          "id": "d04",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:0:9",
+            "alice-in-wonderland:0:8",
+            "alice-in-wonderland:3:7"
+          ]
+        },
+        {
+          "id": "d05",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:1:17",
+            "the-picture-of-dorian-gray:6:14",
+            "the-picture-of-dorian-gray:12:3"
+          ]
+        },
+        {
+          "id": "d06",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:37:0",
+            "jane-eyre:23:2",
+            "jane-eyre:25:1"
+          ]
+        },
+        {
+          "id": "d07",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "the-great-gatsby:4:15",
+            "the-great-gatsby:8:22",
+            "the-great-gatsby:8:21"
+          ]
+        },
+        {
+          "id": "d08",
+          "type": "direct",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "dracula:23:3",
+            "dracula:1:3",
+            "dracula:0:4"
+          ]
+        },
+        {
+          "id": "d09",
+          "type": "direct",
+          "rank": 6,
+          "bookAt1": true,
+          "top": [
+            "crime-and-punishment:38:17",
+            "crime-and-punishment:11:11",
+            "crime-and-punishment:30:19"
+          ]
+        },
+        {
+          "id": "d10",
+          "type": "direct",
+          "rank": 4,
+          "bookAt1": true,
+          "top": [
+            "great-expectations:10:0",
+            "great-expectations:7:11",
+            "great-expectations:16:0"
+          ]
+        },
+        {
+          "id": "d11",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "little-women:0:0",
+            "little-women:3:0",
+            "little-women:0:18"
+          ]
+        },
+        {
+          "id": "d12",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:8:0",
+            "little-women:14:0",
+            "jane-eyre:10:7"
+          ]
+        },
+        {
+          "id": "p01",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "the-great-gatsby:0:24",
+            "the-great-gatsby:0:21",
+            "a-tale-of-two-cities:7:1"
+          ]
+        },
+        {
+          "id": "p02",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:101:0",
+            "the-picture-of-dorian-gray:13:14",
+            "the-picture-of-dorian-gray:13:13"
+          ]
+        },
+        {
+          "id": "p03",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:17:3",
+            "pride-and-prejudice:30:4",
+            "pride-and-prejudice:30:6"
+          ]
+        },
+        {
+          "id": "p04",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "moby-dick:86:5",
+            "moby-dick:88:2",
+            "moby-dick:88:0"
+          ]
+        },
+        {
+          "id": "p05",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:20:6",
+            "pride-and-prejudice:18:8",
+            "frankenstein:20:0"
+          ]
+        },
+        {
+          "id": "p06",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:7:10",
+            "alice-in-wonderland:7:6",
+            "alice-in-wonderland:7:8"
+          ]
+        },
+        {
+          "id": "p07",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:10:1",
+            "a-tale-of-two-cities:38:10",
+            "a-tale-of-two-cities:37:19"
+          ]
+        },
+        {
+          "id": "p08",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:20:6",
+            "jane-eyre:3:17",
+            "jane-eyre:20:5"
+          ]
+        },
+        {
+          "id": "p09",
+          "type": "paraphrased",
+          "rank": 7,
+          "bookAt1": true,
+          "top": [
+            "great-expectations:38:15",
+            "great-expectations:26:0",
+            "crime-and-punishment:40:13"
+          ]
+        },
+        {
+          "id": "p10",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:5:8",
+            "the-picture-of-dorian-gray:7:7",
+            "the-picture-of-dorian-gray:3:10"
+          ]
+        },
+        {
+          "id": "p11",
+          "type": "paraphrased",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "crime-and-punishment:23:22",
+            "crime-and-punishment:23:16",
+            "crime-and-punishment:23:10"
+          ]
+        },
+        {
+          "id": "p12",
+          "type": "paraphrased",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "little-women:23:16",
+            "little-women:14:8",
+            "little-women:2:17"
+          ]
+        },
+        {
+          "id": "n01",
+          "type": "name-free",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:12:3",
+            "the-picture-of-dorian-gray:6:14",
+            "the-picture-of-dorian-gray:1:3"
+          ]
+        },
+        {
+          "id": "n02",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:0:0",
+            "alice-in-wonderland:10:8",
+            "little-women:18:10"
+          ]
+        },
+        {
+          "id": "n03",
+          "type": "name-free",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "the-great-gatsby:2:11",
+            "the-great-gatsby:7:3",
+            "little-women:23:17"
+          ]
+        },
+        {
+          "id": "n04",
+          "type": "name-free",
+          "rank": 3,
+          "bookAt1": false,
+          "top": [
+            "the-picture-of-dorian-gray:19:6",
+            "frankenstein:11:7",
+            "crime-and-punishment:38:8"
+          ]
+        },
+        {
+          "id": "n05",
+          "type": "name-free",
+          "rank": 7,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:18:2",
+            "moby-dick:99:0",
+            "moby-dick:99:2"
+          ]
+        },
+        {
+          "id": "n06",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:10:25",
+            "jane-eyre:11:2",
+            "jane-eyre:19:4"
+          ]
+        },
+        {
+          "id": "n07",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:3:0",
+            "frankenstein:27:7",
+            "frankenstein:3:1"
+          ]
+        },
+        {
+          "id": "n08",
+          "type": "name-free",
+          "rank": 3,
+          "bookAt1": true,
+          "top": [
+            "dracula:1:24",
+            "dracula:1:11",
+            "dracula:1:23"
+          ]
+        },
+        {
+          "id": "n09",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "little-women:0:11",
+            "little-women:0:12",
+            "little-women:1:10"
+          ]
+        },
+        {
+          "id": "n10",
+          "type": "name-free",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "crime-and-punishment:31:14",
+            "great-expectations:1:10",
+            "great-expectations:7:15"
+          ]
+        },
+        {
+          "id": "x01",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:25:9",
+            "frankenstein:23:5",
+            "pride-and-prejudice:50:0"
+          ]
+        },
+        {
+          "id": "x02",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:11:2",
+            "pride-and-prejudice:59:1",
+            "pride-and-prejudice:20:1"
+          ]
+        },
+        {
+          "id": "x03",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "dracula:14:16",
+            "dracula:5:7",
+            "a-tale-of-two-cities:26:2"
+          ]
+        },
+        {
+          "id": "x04",
+          "type": "cross-book",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:8:12",
+            "a-tale-of-two-cities:8:13",
+            "a-tale-of-two-cities:33:5"
+          ]
+        },
+        {
+          "id": "x05",
+          "type": "cross-book",
+          "rank": 5,
+          "bookAt1": false,
+          "top": [
+            "dracula:23:5",
+            "dracula:23:6",
+            "moby-dick:114:3"
+          ]
+        },
+        {
+          "id": "x06",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "jane-eyre:8:7",
+            "frankenstein:8:8",
+            "little-women:17:0"
+          ]
+        },
+        {
+          "id": "x07",
+          "type": "cross-book",
+          "rank": 5,
+          "bookAt1": true,
+          "top": [
+            "little-women:7:4",
+            "little-women:7:3",
+            "little-women:42:12"
+          ]
+        },
+        {
+          "id": "x08",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "moby-dick:98:0",
+            "frankenstein:26:6",
+            "frankenstein:5:4"
+          ]
+        },
+        {
+          "id": "x09",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:92:5",
+            "great-expectations:44:3",
+            "moby-dick:92:4"
+          ]
+        },
+        {
+          "id": "x10",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:19:2",
+            "frankenstein:25:9",
+            "pride-and-prejudice:30:6"
+          ]
+        },
+        {
+          "id": "x11",
+          "type": "cross-book",
+          "rank": 4,
+          "bookAt1": false,
+          "top": [
+            "little-women:17:13",
+            "jane-eyre:8:8",
+            "the-great-gatsby:0:10"
+          ]
+        },
+        {
+          "id": "x12",
+          "type": "cross-book",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:35:3",
+            "moby-dick:35:2",
+            "moby-dick:98:0"
+          ]
+        }
+      ],
+      "holdoutPerQuestion": [
+        {
+          "id": "h01",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:22:11",
+            "jane-eyre:26:25",
+            "jane-eyre:26:24"
+          ]
+        },
+        {
+          "id": "h02",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:1:5",
+            "the-picture-of-dorian-gray:18:0",
+            "the-picture-of-dorian-gray:1:3"
+          ]
+        },
+        {
+          "id": "h03",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:5:9",
+            "alice-in-wonderland:5:8",
+            "alice-in-wonderland:7:8"
+          ]
+        },
+        {
+          "id": "h04",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:48:3",
+            "moby-dick:92:0",
+            "moby-dick:92:1"
+          ]
+        },
+        {
+          "id": "h05",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:60:4",
+            "pride-and-prejudice:9:5",
+            "pride-and-prejudice:10:4"
+          ]
+        },
+        {
+          "id": "h06",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "the-great-gatsby:0:24",
+            "the-picture-of-dorian-gray:0:14",
+            "the-picture-of-dorian-gray:6:14"
+          ]
+        },
+        {
+          "id": "h07",
+          "type": "name-free",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:19:2",
+            "little-women:45:19",
+            "a-tale-of-two-cities:19:2"
+          ]
+        },
+        {
+          "id": "h08",
+          "type": "name-free",
+          "rank": 6,
+          "bookAt1": false,
+          "top": [
+            "crime-and-punishment:30:1",
+            "a-tale-of-two-cities:39:25",
+            "a-tale-of-two-cities:39:26"
+          ]
+        },
+        {
+          "id": "h09",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "crime-and-punishment:4:6",
+            "crime-and-punishment:4:8",
+            "crime-and-punishment:13:1"
+          ]
+        },
+        {
+          "id": "h10",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:21:11",
+            "a-tale-of-two-cities:21:12",
+            "a-tale-of-two-cities:14:11"
+          ]
+        },
+        {
+          "id": "h11",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "the-great-gatsby:3:23",
+            "little-women:1:15",
+            "little-women:11:5"
+          ]
+        },
+        {
+          "id": "h12",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:7:4",
+            "alice-in-wonderland:7:5",
+            "alice-in-wonderland:7:7"
+          ]
+        }
+      ]
+    },
+    {
+      "config": "+neighbors (shipped)",
+      "description": "+ 0.3 x best neighbor chunk's score",
+      "chunks": 7107,
+      "overall": {
+        "n": 46,
+        "r1": 34.8,
+        "r5": 58.7,
+        "r10": 65.2,
+        "book1": 84.8,
+        "mrr": 0.452
+      },
+      "byType": {
+        "direct": {
+          "n": 12,
+          "r1": 66.7,
+          "r5": 91.7,
+          "r10": 100,
+          "book1": 100,
+          "mrr": 0.764
+        },
+        "paraphrased": {
+          "n": 12,
+          "r1": 25,
+          "r5": 25,
+          "r10": 25,
+          "book1": 83.3,
+          "mrr": 0.25
+        },
+        "name-free": {
+          "n": 10,
+          "r1": 40,
+          "r5": 70,
+          "r10": 80,
+          "book1": 90,
+          "mrr": 0.546
+        },
+        "cross-book": {
+          "n": 12,
+          "r1": 8.3,
+          "r5": 50,
+          "r10": 58.3,
+          "book1": 66.7,
+          "mrr": 0.265
+        }
+      },
+      "holdout": {
+        "n": 12,
+        "r1": 41.7,
+        "r5": 58.3,
+        "r10": 58.3,
+        "book1": 83.3,
+        "mrr": 0.475
+      },
+      "perQuestion": [
+        {
+          "id": "d01",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:0:0",
+            "moby-dick:40:0",
+            "moby-dick:15:18"
+          ]
+        },
+        {
+          "id": "d02",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:0:0",
+            "pride-and-prejudice:0:1",
+            "great-expectations:27:9"
+          ]
+        },
+        {
+          "id": "d03",
+          "type": "direct",
+          "rank": 4,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:1:5",
+            "a-tale-of-two-cities:1:6",
+            "a-tale-of-two-cities:8:6"
+          ]
+        },
+        {
+          "id": "d04",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:0:9",
+            "alice-in-wonderland:0:8",
+            "alice-in-wonderland:0:7"
+          ]
+        },
+        {
+          "id": "d05",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:1:17",
+            "the-picture-of-dorian-gray:12:3",
+            "the-picture-of-dorian-gray:12:2"
+          ]
+        },
+        {
+          "id": "d06",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:37:0",
+            "jane-eyre:25:1",
+            "jane-eyre:36:27"
+          ]
+        },
+        {
+          "id": "d07",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "the-great-gatsby:4:15",
+            "the-great-gatsby:8:22",
+            "the-great-gatsby:4:16"
+          ]
+        },
+        {
+          "id": "d08",
+          "type": "direct",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "dracula:23:3",
+            "dracula:1:3",
+            "dracula:0:4"
+          ]
+        },
+        {
+          "id": "d09",
+          "type": "direct",
+          "rank": 6,
+          "bookAt1": true,
+          "top": [
+            "crime-and-punishment:38:17",
+            "crime-and-punishment:30:19",
+            "crime-and-punishment:11:11"
+          ]
+        },
+        {
+          "id": "d10",
+          "type": "direct",
+          "rank": 4,
+          "bookAt1": true,
+          "top": [
+            "great-expectations:10:0",
+            "great-expectations:7:11",
+            "great-expectations:16:0"
+          ]
+        },
+        {
+          "id": "d11",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "little-women:0:0",
+            "little-women:3:0",
+            "little-women:1:4"
+          ]
+        },
+        {
+          "id": "d12",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:8:0",
+            "jane-eyre:2:5",
+            "jane-eyre:10:7"
+          ]
+        },
+        {
+          "id": "p01",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "the-great-gatsby:0:24",
+            "the-great-gatsby:5:9",
+            "the-great-gatsby:5:10"
+          ]
+        },
+        {
+          "id": "p02",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "the-picture-of-dorian-gray:13:14",
+            "the-picture-of-dorian-gray:13:13",
+            "crime-and-punishment:38:1"
+          ]
+        },
+        {
+          "id": "p03",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:8:6",
+            "pride-and-prejudice:17:3",
+            "pride-and-prejudice:8:5"
+          ]
+        },
+        {
+          "id": "p04",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "moby-dick:44:5",
+            "moby-dick:86:5",
+            "moby-dick:44:4"
+          ]
+        },
+        {
+          "id": "p05",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:20:6",
+            "pride-and-prejudice:18:8",
+            "pride-and-prejudice:18:7"
+          ]
+        },
+        {
+          "id": "p06",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:7:10",
+            "alice-in-wonderland:5:8",
+            "alice-in-wonderland:7:8"
+          ]
+        },
+        {
+          "id": "p07",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:37:19",
+            "a-tale-of-two-cities:37:20",
+            "a-tale-of-two-cities:16:3"
+          ]
+        },
+        {
+          "id": "p08",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:20:6",
+            "jane-eyre:3:17",
+            "jane-eyre:20:5"
+          ]
+        },
+        {
+          "id": "p09",
+          "type": "paraphrased",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "great-expectations:38:12",
+            "great-expectations:38:15",
+            "great-expectations:38:11"
+          ]
+        },
+        {
+          "id": "p10",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:7:7",
+            "the-picture-of-dorian-gray:3:10",
+            "the-picture-of-dorian-gray:7:8"
+          ]
+        },
+        {
+          "id": "p11",
+          "type": "paraphrased",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "crime-and-punishment:23:16",
+            "crime-and-punishment:23:10",
+            "crime-and-punishment:23:22"
+          ]
+        },
+        {
+          "id": "p12",
+          "type": "paraphrased",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "little-women:14:8",
+            "little-women:2:17",
+            "little-women:14:9"
+          ]
+        },
+        {
+          "id": "n01",
+          "type": "name-free",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:12:3",
+            "the-picture-of-dorian-gray:6:14",
+            "the-picture-of-dorian-gray:12:2"
+          ]
+        },
+        {
+          "id": "n02",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:0:0",
+            "little-women:18:10",
+            "alice-in-wonderland:10:8"
+          ]
+        },
+        {
+          "id": "n03",
+          "type": "name-free",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "the-great-gatsby:2:11",
+            "the-great-gatsby:7:3",
+            "the-great-gatsby:2:10"
+          ]
+        },
+        {
+          "id": "n04",
+          "type": "name-free",
+          "rank": 3,
+          "bookAt1": false,
+          "top": [
+            "the-picture-of-dorian-gray:19:6",
+            "frankenstein:11:7",
+            "crime-and-punishment:38:8"
+          ]
+        },
+        {
+          "id": "n05",
+          "type": "name-free",
+          "rank": 8,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:18:2",
+            "moby-dick:15:5",
+            "moby-dick:99:0"
+          ]
+        },
+        {
+          "id": "n06",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:10:25",
+            "jane-eyre:11:2",
+            "crime-and-punishment:12:24"
+          ]
+        },
+        {
+          "id": "n07",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:3:0",
+            "frankenstein:3:1",
+            "frankenstein:27:7"
+          ]
+        },
+        {
+          "id": "n08",
+          "type": "name-free",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "dracula:1:24",
+            "dracula:1:23",
+            "dracula:1:11"
+          ]
+        },
+        {
+          "id": "n09",
+          "type": "name-free",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "little-women:0:11",
+            "little-women:0:12",
+            "little-women:1:10"
+          ]
+        },
+        {
+          "id": "n10",
+          "type": "name-free",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "great-expectations:1:10",
+            "great-expectations:1:9",
+            "crime-and-punishment:31:14"
+          ]
+        },
+        {
+          "id": "x01",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "frankenstein:25:9",
+            "frankenstein:23:5",
+            "frankenstein:25:7"
+          ]
+        },
+        {
+          "id": "x02",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:11:2",
+            "pride-and-prejudice:20:1",
+            "pride-and-prejudice:20:2"
+          ]
+        },
+        {
+          "id": "x03",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "dracula:26:21",
+            "dracula:26:22",
+            "dracula:15:10"
+          ]
+        },
+        {
+          "id": "x04",
+          "type": "cross-book",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:8:12",
+            "a-tale-of-two-cities:8:13",
+            "a-tale-of-two-cities:33:5"
+          ]
+        },
+        {
+          "id": "x05",
+          "type": "cross-book",
+          "rank": 4,
+          "bookAt1": false,
+          "top": [
+            "dracula:23:5",
+            "dracula:23:6",
+            "moby-dick:114:3"
+          ]
+        },
+        {
+          "id": "x06",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "frankenstein:8:8",
+            "frankenstein:8:9",
+            "jane-eyre:8:7"
+          ]
+        },
+        {
+          "id": "x07",
+          "type": "cross-book",
+          "rank": 3,
+          "bookAt1": true,
+          "top": [
+            "little-women:7:4",
+            "little-women:7:3",
+            "little-women:7:5"
+          ]
+        },
+        {
+          "id": "x08",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "frankenstein:5:4",
+            "moby-dick:98:0",
+            "jane-eyre:32:4"
+          ]
+        },
+        {
+          "id": "x09",
+          "type": "cross-book",
+          "rank": 10,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:92:5",
+            "moby-dick:92:4",
+            "moby-dick:92:6"
+          ]
+        },
+        {
+          "id": "x10",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:19:2",
+            "frankenstein:25:9",
+            "frankenstein:25:10"
+          ]
+        },
+        {
+          "id": "x11",
+          "type": "cross-book",
+          "rank": 2,
+          "bookAt1": false,
+          "top": [
+            "crime-and-punishment:0:8",
+            "frankenstein:8:3",
+            "the-great-gatsby:0:10"
+          ]
+        },
+        {
+          "id": "x12",
+          "type": "cross-book",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:35:3",
+            "moby-dick:35:2",
+            "moby-dick:98:0"
+          ]
+        }
+      ],
+      "holdoutPerQuestion": [
+        {
+          "id": "h01",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "jane-eyre:22:11",
+            "jane-eyre:26:25",
+            "jane-eyre:26:24"
+          ]
+        },
+        {
+          "id": "h02",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "the-picture-of-dorian-gray:1:5",
+            "the-picture-of-dorian-gray:1:3",
+            "the-picture-of-dorian-gray:14:5"
+          ]
+        },
+        {
+          "id": "h03",
+          "type": "direct",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:5:9",
+            "alice-in-wonderland:5:8",
+            "alice-in-wonderland:5:10"
+          ]
+        },
+        {
+          "id": "h04",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "moby-dick:92:0",
+            "moby-dick:92:1",
+            "moby-dick:1:1"
+          ]
+        },
+        {
+          "id": "h05",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "pride-and-prejudice:60:4",
+            "pride-and-prejudice:10:4",
+            "pride-and-prejudice:9:5"
+          ]
+        },
+        {
+          "id": "h06",
+          "type": "paraphrased",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "the-great-gatsby:0:24",
+            "the-great-gatsby:0:23",
+            "the-picture-of-dorian-gray:0:14"
+          ]
+        },
+        {
+          "id": "h07",
+          "type": "name-free",
+          "rank": null,
+          "bookAt1": false,
+          "top": [
+            "a-tale-of-two-cities:19:2",
+            "little-women:45:19",
+            "frankenstein:19:2"
+          ]
+        },
+        {
+          "id": "h08",
+          "type": "name-free",
+          "rank": 5,
+          "bookAt1": false,
+          "top": [
+            "a-tale-of-two-cities:39:25",
+            "a-tale-of-two-cities:39:26",
+            "crime-and-punishment:30:1"
+          ]
+        },
+        {
+          "id": "h09",
+          "type": "name-free",
+          "rank": 2,
+          "bookAt1": true,
+          "top": [
+            "crime-and-punishment:4:8",
+            "crime-and-punishment:4:6",
+            "crime-and-punishment:13:1"
+          ]
+        },
+        {
+          "id": "h10",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "a-tale-of-two-cities:21:11",
+            "a-tale-of-two-cities:21:12",
+            "a-tale-of-two-cities:14:11"
+          ]
+        },
+        {
+          "id": "h11",
+          "type": "cross-book",
+          "rank": null,
+          "bookAt1": true,
+          "top": [
+            "little-women:1:15",
+            "the-great-gatsby:3:23",
+            "little-women:2:7"
+          ]
+        },
+        {
+          "id": "h12",
+          "type": "cross-book",
+          "rank": 1,
+          "bookAt1": true,
+          "top": [
+            "alice-in-wonderland:7:4",
+            "alice-in-wonderland:7:5",
+            "alice-in-wonderland:7:7"
+          ]
+        }
+      ]
+    }
+  ]
+}

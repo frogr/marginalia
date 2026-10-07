@@ -1,0 +1,17 @@
+{
+  "about": "Held-out questions, written after the retrieval changes in PROOF.md were chosen with evals/questions.json, so they were never used for tuning. Same format and scoring as questions.json.",
+  "questions": [
+    { "id": "h01", "type": "direct", "book": "jane-eyre", "question": "What does Jane mean when she says she is no bird and no net ensnares her?", "gold": ["I am no bird; and no net ensnares me"] },
+    { "id": "h02", "type": "direct", "book": "the-picture-of-dorian-gray", "question": "What does Lord Henry say is the only way to get rid of a temptation?", "gold": ["The only way to get rid of a temptation is to yield to it"] },
+    { "id": "h03", "type": "direct", "book": "alice-in-wonderland", "question": "Why does the Cheshire Cat say we're all mad here?", "gold": ["we’re all mad here. I’m mad. You’re mad."] },
+    { "id": "h04", "type": "paraphrased", "book": "moby-dick", "question": "How does Ishmael survive after the Pequod goes down?", "gold": ["Buoyed up by that coffin, for almost one whole day and night"] },
+    { "id": "h05", "type": "paraphrased", "book": "pride-and-prejudice", "question": "How does Darcy open his first declaration of love to Elizabeth?", "gold": ["In vain have I struggled. It will not do."] },
+    { "id": "h06", "type": "paraphrased", "book": "the-great-gatsby", "question": "What image does Nick leave us with in the very last line?", "gold": ["So we beat on, boats against the current"] },
+    { "id": "h07", "type": "name-free", "book": "frankenstein", "question": "Hiding in a hovel, a lonely being spies on a poor family through a gap in the wall. What does he see?", "gold": ["small and almost imperceptible chink through which the eye could just penetrate"] },
+    { "id": "h08", "type": "name-free", "book": "jane-eyre", "question": "A man stopped at the altar admits that his secret wife is insane. What does he say about her family?", "gold": ["she came of a mad family; idiots and maniacs through three generations"] },
+    { "id": "h09", "type": "name-free", "book": "crime-and-punishment", "question": "In a dream, a drunken peasant beats his old horse to death in front of a crowd. What does he shout?", "gold": ["I feel as if I could kill her"] },
+    { "id": "h10", "type": "cross-book", "book": "a-tale-of-two-cities", "question": "What name does the young Marquis go by while he lives in England?", "gold": ["he is no Marquis there; he is Mr. Charles Darnay"], "confuser": "Charles Bingley in Pride and Prejudice" },
+    { "id": "h11", "type": "cross-book", "book": "little-women", "question": "How did Jo first meet the boy next door at the New Year's party?", "gold": ["she slipped into a curtained recess"], "confuser": "Joe Gargery in Great Expectations" },
+    { "id": "h12", "type": "cross-book", "book": "alice-in-wonderland", "question": "What did the Queen use for croquet mallets and balls?", "gold": ["the balls were live hedgehogs, the mallets live flamingoes"], "confuser": "Queen Mab in Moby-Dick" }
+  ]
+}
