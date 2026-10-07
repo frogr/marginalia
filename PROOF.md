@@ -27,8 +27,10 @@ Each book has its own parse rules (`src/corpus/books.ts`) and an expected chapte
 ```
 $ npm test
  Test Files  6 passed (6)
-      Tests  60 passed (60)
+      Tests  61 passed (61)
 ```
+
+Re-run on 2026-10-07: 61 tests pass (earlier runs showed 60).
 
 Covered: chunk offsets, chapter boundaries, overlap, long-paragraph splitting, sentence splitting around "Mr."; tokenizer, BM25 ranking, stemming, book filter, phrase and quote boosts, neighbor scores; RRF; hybrid retrieval with a stub embedder and the BM25 fallback when embedding fails; vector index loading and stale-index rejection; the validator (normalization, offsets, ellipses, order, wrong passage, unretrieved passage, too short); the model loop (retry on a bad quote, flags kept when the retry fails, no retry when the budget is spent); Anthropic, OpenAI and embeddings request shapes; 401, 429, 5xx and timeouts; and the routes (validation, 413, rate limit, model failure fallback, daily cap, passage, reader, static files and CSP header). `npm run typecheck` passes. No test touches the network.
 
@@ -150,7 +152,7 @@ $ curl -s localhost:3124/health
 
 $ curl -s -X POST localhost:3124/api/ask -H 'content-type: application/json' \
     -d '{"question":"What did the Queen use for croquet mallets and balls?"}'
-extractive verified 3/3 top alice-in-wonderland:7:4 { retrieveMs: 143, answerMs: 8 }   (summarized with node)
+extractive verified 3/3 top alice-in-wonderland:7:4 { retrieveMs: 143, answerMs: 8 }
 
 $ for i in $(seq 1 13); do curl ... /api/ask; done
 200 200 200 200 200 200 200 200 200 200 200 429 429
