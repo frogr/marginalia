@@ -122,7 +122,8 @@ export function anthropicCall(apiKey: string, model: string, timeoutMs: number, 
       "https://api.anthropic.com/v1/messages",
       {
         headers: { "x-api-key": apiKey, "anthropic-version": "2023-06-01" },
-        body: { model, max_tokens: 1200, temperature: 0, system, messages: [{ role: "user", content: user }] },
+        // No temperature: current Claude models reject sampling overrides.
+        body: { model, max_tokens: 1200, system, messages: [{ role: "user", content: user }] },
         timeoutMs,
         provider: "Anthropic",
       },
